@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <div class="md-toolbar-tools">
+        <button mat-button color="accent" routerLink="findaproduct" id="findaproduct-button">Products</button>
+        <button mat-button color="accent" routerLink="registerproduct" id="registerproduct-button" >Add a product</button>
+        <span flex>
+            <button class="" mat-button color="primary" id="registerproduct-button">
+                {{cart}} kr.
+                <i class="material-icons">
+                    shopping_cart
+                </i> 
+            </button>
+        </span>
+    </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

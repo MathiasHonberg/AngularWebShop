@@ -1,0 +1,8 @@
+<h4>Search for product: <input type="text" [(ngModel)]="searchInput"></h4>
+
+<div *ngFor="let productObject of products | filterProduct: searchInput" class="product-container">
+  <app-product (productDeleteEmitter)="onDeleteProduct($event)" [product]="productObject" ></app-product>
+</div>
+
+<button (click)="onTestClick()">Don't click me</button>
+{{isProduct}}

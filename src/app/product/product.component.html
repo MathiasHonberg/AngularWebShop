@@ -1,0 +1,20 @@
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title>{{product.name | uppercase }} </mat-card-title>
+    <mat-card-subtitle>pieces: {{product.quantity}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      {{product.price | currency:'DKK'}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="fa fa-shopping-cart" (click)="addToCart(product.price)" mat-button>Add to Cart <i class="material-icons">
+        add_shopping_cart
+      </i></button>
+    <button mat-button (click)="onDeleteProduct(product._id)" class="delete-button">Delete product</button>
+  </mat-card-actions>
+</mat-card>

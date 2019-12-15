@@ -1,0 +1,13 @@
+<mat-toolbar>Maddi's Webshop
+  <button *ngIf="!isLoggedIn()" mat-button color="accent" routerLink="home">Home</button>
+  <button *ngIf="isLoggedIn()" (click)="logout()" mat-button color="accent" routerLink="home/login" id="home-login">Logout</button>
+
+  <!-- <button mat-button color="accent" routerLink="login">Login</button>
+  <button mat-button color="accent" routerLink="register">Register</button> -->
+</mat-toolbar>
+
+
+  <router-outlet></router-outlet>
+
+<!-- <app-login></app-login> -->
+<!-- <app-register></app-register> --> 
